@@ -15,7 +15,7 @@ jobs:
 
     env:
       Greeting: Dear
-      testvar: value-2
+      testvar: value-2    #if remove this ,value-1
     
     steps:
     - name: print-values-of-env-vars
@@ -25,4 +25,4 @@ jobs:
         echo "testvar  ${{ env.testvar }}"
       env:
           First_Name: Student
-          testvar: value-3
+          testvar: value-3  #if remove this ,it will take job level value(value-2)
