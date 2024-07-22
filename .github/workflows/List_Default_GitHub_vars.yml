@@ -8,7 +8,7 @@ jobs:
   ubuntu-environment-variables:
     runs-on: ubuntu-latest
     steps:
-      - run: env
+      - run: env    #default github variables
 
   windows-environment-variables:
     runs-on: windows-latest
