@@ -15,7 +15,7 @@ jobs:
 
         with:
           name: file
-          path: file.txt
+          path: file.txt  #the action actions/upload-artifact@v2 is used to upload a file (file.txt) to GitHub storage, making it available for subsequent jobs.
           retention-days: 10
 
  
@@ -24,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: job_1
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2  #Here, the action actions/download-artifact@v2 is used to download the artifact (file.txt) that was uploaded in job_1.
         with:
           name: file
       - name: Printing the file content
-        run: cat file.txt
+        run: cat file.txt   #his step prints the content of the downloaded file.
