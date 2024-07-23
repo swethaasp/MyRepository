@@ -18,3 +18,5 @@ jobs:
       - name: 'Print secret from environment'
         run: |
             echo "APP_SECRET: ${{ secrets.APP_SECRET  }}"
+
+           # if secret value found in environment,it will take it from there.
